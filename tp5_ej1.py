@@ -20,19 +20,14 @@ def ingreso_entero(mensaje):
 
 def numero_par(entero):
     if entero >= 0:
-         for i in range (entero, 0, -1):
-             entero-= 2
-             return entero
-    else:
-        for i in range (entero, 0, +1):
-            entero += 2
-            return entero
-    if entero == 0:
-        print(f" El {entero} es un numero par")
-    else:
-        print(f"El {entero} no es un numero par")
+        while entero > 0:
+            entero = entero - 2
+        return entero
         
-            
+    else:
+        while entero < 0:
+            entero = entero + 2
+        return entero
         
 
 def prueba():
