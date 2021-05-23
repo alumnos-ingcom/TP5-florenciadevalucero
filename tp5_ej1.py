@@ -22,19 +22,26 @@ def numero_par(entero):
     if entero >= 0:
         while entero > 0:
             entero = entero - 2
-        return entero
+        if entero == 0:
+            return True
+        else:
+            return False
+        
         
     else:
         while entero < 0:
             entero = entero + 2
-        return entero
+        if entero == 0:
+            return True
+        else:
+            return False
         
 
 def prueba():
     mensaje = ("Ingrese un numero para verificar si es par o no: ")
     numero = ingreso_entero(mensaje)
     verificar = numero_par(numero)
-    if verificar == 0:
+    if verificar:
         print(f" El {numero} es un numero par")
     else:
         print(f"El {numero} no es un numero par")
