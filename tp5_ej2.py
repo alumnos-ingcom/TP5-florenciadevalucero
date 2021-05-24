@@ -9,8 +9,8 @@
 from tp5_ej1 import ingreso_entero
 
 def fibonacci(numero):
-    sucesion = [0, 1]
-    for i in range(numero - 1):
+    sucesion = [1, 1]
+    for i in range(numero - 2):
         sucesion.append(sucesion[-1] + sucesion[-2])
     return sucesion[-1]
     
