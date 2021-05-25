@@ -14,9 +14,15 @@ def ingreso_entero(mensaje):
     ingreso = input(mensaje + "# ")
     try:
         entero = int(ingreso)
+        if entero < 0:
+            entero = ingreso_entero("No es un número positivo, ingrese un valor positivo: ")
     except ValueError as err:
         raise IngresoIncorrecto("No era un número!") from err
     return entero
+    
+    
+        
+    
 
 def numero_par(entero):
     if entero >= 0:
