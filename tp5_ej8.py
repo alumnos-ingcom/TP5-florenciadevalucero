@@ -19,10 +19,10 @@ def codificacion(posicion, texto):
             
         elif (entero_letra_modificada > 90) and (entero_letra_modificada < 97): #90= Z , 97= a
             entero_letra_modificada = entero_letra_modificada - 26 # 90 - 26 = A  
-            
+
         elif entero_letra_modificada > 57 and entero_letra_modificada < 65: # 57= 9, 65= A
             entero_letra_modificada = entero_letra_modificada - 10
-            
+
         letra_modificada = chr(entero_letra_modificada)
         lista_codificar.append(letra_modificada)
     texto = "".join(lista_codificar)
@@ -38,10 +38,10 @@ def decodificacion(texto, posicion):
         
         if (entero_letra_modificada < 97) and (entero_letra_modificada > 90):
             entero_letra_modificada = entero_letra_modificada + 26
-            
+
         elif (entero_letra_modificada < 65) and (entero_letra_modificada > 57):
             entero_letra_modificada = entero_letra_modificada + 26
-            
+
         elif (entero_letra_modificada < 48): # 48 = 0
             entero_letra_modificada = entero_letra_modificada + 10
             
