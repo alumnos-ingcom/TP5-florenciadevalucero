@@ -7,13 +7,13 @@
 #lo que esté en mayuscula y en mayuscula lo que esté en minuscula.
 def intercambio(texto):
     for letra in texto:
-        minusculas = letra.islower()
-        mayusculas = letra.isupper()
-        if minusculas:
+        es_minus = letra.islower()
+        es_mayus = letra.isupper()
+        if es_minus:
             letras_minusculas = letra
             letras_minusculas = letras_minusculas.upper()
             texto = texto.replace(f"{letra}", f"{letras_minusculas}") # reemplaza la letra minuscula por la mayuscula
-        elif mayusculas:
+        elif es_mayus:
             letras_mayusculas = letra
             letras_mayusculas = letras_mayusculas.lower()
             texto = texto.replace(f"{letra}", f"{letras_mayusculas}")
